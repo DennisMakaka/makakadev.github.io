@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Maze</title>
+  <style>
+    /* Global Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #333;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    /* Intro Section */
+    .intro-section {
+      text-align: center;
+      padding: 4rem 1rem;
+      background-color: #222;
+      color: white;
+    }
+
+    .intro-section img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      margin-bottom: 2rem;
+    }
+
+    .intro-section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro-section p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .intro-section .button {
+      background-color: #ff6347;
+      color: white;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 5px;
+    }
+
+    .intro-section .button:hover {
+      background-color: #ff4500;
+    }
+
+    /* Feature Section */
+    .feature-section {
+      padding: 4rem 1rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .feature-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .feature {
+      display: inline-block;
+      width: 30%;
+      margin: 0 1rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature p {
+      font-size: 1rem;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 4rem 1rem;
+      background-color: #eaeaea;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-links a {
+      margin: 0 1rem;
+      color: #333;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+      color: #ff6347;
+    }
+
+    .about-section a.github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #333;
+      color: white;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .about-section a.github-link:hover {
+      background-color: #555;
+    }
+
+    /* Video Section (Optional) */
+    .video-section {
+      padding: 4rem 1rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .video-section video {
+      width: 80%;
+      max-width: 800px;
+      height: auto;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 1rem;
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="pages\features.html">Features</a></li>
+      <li><a href="pages\about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <img src="assets\maze.jpeg" alt="The Maze Cover Image">
+    <h1>The Maze</h1>
+    <p>A 3D navigable maze rendered with raycasting techniques.</p>
+    <a href="https://github.com/DennisMakaka/Maze-project.git" class="button">Explore The Maze</a>
+  </section>
+
+  <!-- Feature Section -->
+  <section id="features" class="feature-section">
+    <h2>Key Features</h2>
+    <div class="feature">
+      <img src="assets\raycasting.jpeg" alt="Raycasting Engine">
+      <h3>Raycasting Rendering Engine</h3>
+      <p>The core of The Maze project is its custom-built raycasting engine that renders a 3D environment in real-time from a 2D map.</p>
+    </div>
+    <div class="feature">
+      <img src="assets\collision detection.png" alt="Collision Detection">
+      <h3>Collision Detection</h3>
+      <p>Our precise collision detection ensures realistic interaction with the environment, preventing users from clipping through walls.</p>
+    </div>
+    <div class="feature">
+      <img src="assets\camera movement.jpeg" alt="Smooth Camera Movement">
+      <h3>Smooth Camera Movement</h3>
+      <p>Navigate the maze effortlessly with smooth camera transitions and responsive controls.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>About The Maze</h2>
+    <p>The Maze was born out of a fascination with video games and 3D environments. It’s an exploration of raycasting techniques to create an interactive maze.</p>
+    <p>This project is part of my portfolio for Holberton School, showcasing my skills in low-level game development and problem-solving.</p>
+    <div class="social-links">
+      <a href="www.linkedin.com/in/dennis-makaka-419838261" target="_blank">LinkedIn</a>
+      <a href="https://github.com/DennisMakaka" target="_blank">GitHub</a>
+      <a href="https://twitter.com/DennisMakaka" target="_blank">Twitter</a>
+    </div>
+    <a href="https://github.com/DennisMakaka/the-maze" class="github-link" target="_blank">GitHub Repository</a>
+  </section>
+
+  <!-- Optional Video Section -->
+  <section id="video" class="video-section">
+    <h2>Project Introduction Video</h2>
+    <video controls>
+      <source src="assets\videoplayback (4).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Dennis Makaka. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
